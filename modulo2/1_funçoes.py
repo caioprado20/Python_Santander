@@ -51,3 +51,38 @@ funcao() # Imprime 10
 funcao2 () # imprime 20
 print(variavel_global) # Imprime 20
 #print(variavel_local) # gera um erro, a variável não está definida neste escopo
+
+### DOCUMENTAÇÃO DE FUNÇOES(DOCSTRINGS)
+
+"""
+É uma boa pratica documentar nossas funçoes utilizando docstrings. As docstrings são cadeias de texto que descrevem o propósito, os parâmetros e o valor de retorno de uma função. São colocadas imediatamente após a definição da função e são encerrados entre pasas duplastriplas(tipo essa daqui)
+
+
+
+"""
+def area_retangulo (base, altura):
+    """
+    calcula a área de um retangulo
+
+    Args: 
+        base (float): A base do retangulo.
+        altura(float): A autura do retÂngulo
+    returns:
+        float : A area do retângulo.
+    """
+    return base *altura        
+
+### FUNÇOES COM NÚMERO VARIÁVEL DE ARGUMENTOS
+
+"""
+O Python permite definir funçoes que aceitem um número variável de argumentos. Isso é feito ultilizando o operador * antes do nome do parâmetro
+"""
+
+def soma_variavel(*numeros):
+    total = 0 
+    for numero in numeros:
+        total += numero
+    return total
+
+print (soma_variavel(1,2,3))  # Imprime 6   
+print (soma_variavel(4,5,6,7)) # Imprime 22
